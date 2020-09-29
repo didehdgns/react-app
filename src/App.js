@@ -15,7 +15,7 @@ class App extends React.Component {
         data: { games },
       },
     } = await axios.get(
-      "https://raw.githubusercontent.com/didehdgns/react-app/2afb0068a4f487bd06ffe71e4e2734d2bcceb3e4/json/jsondata.json"
+      "https://raw.githubusercontent.com/didehdgns/react-app/master/json/jsondata.json"
     );
     console.log(games);
     this.setState({ games: games, isLoading: false });
