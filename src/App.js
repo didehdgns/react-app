@@ -11,13 +11,11 @@ class App extends React.Component {
 
   getGames = async () => {
     const {
-      data: {
-        data: { movies },
-      },
+      data: { games },
     } = await axios.get(
-      "https://yts-proxy.now.sh/list_movies.json?sort_by=rating"
+      "https://doc-08-a0-docs.googleusercontent.com/docs/securesc/vcna2qvfuth63ql45skejetamb54hqhp/pfv7vuf4rdsv9h8o6fpjp7mdtbkhuf6f/1601343375000/09917110403716147371/09917110403716147371/1JuU3laQJLsuNQHVUi-eBTD2X_AaqzE7m?e=download&authuser=0&nonce=srm6rd3cinntg&user=09917110403716147371&hash=5bm45ieo24d4vee5ojvdmd54il61hd0i"
     );
-    this.setState({ games: movies, isLoading: false });
+    this.setState({ games: games, isLoading: false });
   };
   async componentDidMount() {
     this.getGames();

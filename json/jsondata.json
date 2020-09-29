@@ -1,0 +1,24 @@
+{
+  "data": {
+    "games": [
+      {
+        "id": 236850,
+        "title": "Europa Universalis IV",
+        "year": 2013,
+        "userscore": 8.7,
+        "cover_img": "https://w.namu.la/s/60865e5920320b8314cf32b8487e811b98554a3fbd42f296df1ee657dcfff559fa6e586dc44adcc4cede517c48586bebbc36b43fd33d4aebe77470d6328259b18aee739f4f2cf3142e4e6a3c111fcadbdad40da39831af80de305334c62132d6497bb989caacc608eab0668a7ca2651a",
+        "genres": ["역사", "대전략", "시뮬레이션", "대체 역사", "경제"],
+        "summary": "4세기에 걸친 상세한 역사가 Paradox의 고전적인 그랜드 전략 게임에서 살아납니다. 초기 현대 세계의 복잡한 시뮬레이션에서 르네상스에서 혁명으로 모든 국가를 이끄십시오. 전쟁, 외교, 무역의 기술을 마스터하여 국가의 역사를 형성하고 변화 시키십시오!"
+      },
+      {
+        "id": "578080",
+        "tilte": "PLAYERUNKNOWN'S BATTLEGROUNDS",
+        "year": "2017",
+        "userscore": 4.6,
+        "cover_img": "https://w.namu.la/s/0dd4f54aaf039b36e60cdb06d28a948ea5e6d5b98ef1763e3f3c018173392f6acdb524c55d30689260579974ef8620dabfba269d0ca00e8f58d5186bdb40f38f66c791a7ef30784e04141ff2aec775056090e9de4ced5d910ec7d01e599e1fb5baa3f8b8f7ef8e20fa503764abeecea2",
+        "genres": ["생존", "슈팅", "멀티플레이어", "배틀로얄", "PVP"],
+        "summary": "PLAYERUNKNOWN’S BATTLEGROUNDS는 배틀로얄 게임으로, 외딴 섬에서 총 100명의 플레이어가 다양한 무기와 전략을 이용하여 마지막 1명이 살아남는 순간까지 전투를 하게 됩니다."
+      }
+    ]
+  }
+}
