@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./Game.css";
 
 function Game({
-  customerid,
+  id,
   name,
   job,
   taste,
@@ -52,7 +52,7 @@ function Game({
 }
 
 Game.propTypes = {
-  customerid: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   job: PropTypes.string.isRequired,
   taste: PropTypes.arrayOf(PropTypes.string).isRequired,

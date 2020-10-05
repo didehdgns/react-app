@@ -37,10 +37,11 @@ class App extends React.Component {
           <div className="games">
             {mall2.map((mall2) => (
               <Game
-                key={mall2.customerid}
-                id={mall2.customerid}
+                key={mall2.id}
+                id={mall2.id}
                 name={mall2.name}
                 job={mall2.job}
+                visit={mall2.visit}
                 taste={mall2.taste}
                 residence={mall2.residence}
                 discovery={mall2.discovery}
