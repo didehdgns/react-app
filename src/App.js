@@ -6,25 +6,27 @@ import "./App.css";
 class App extends React.Component {
   state = {
     isLoading: true,
-    games: [],
+    mall2: [],
   };
 
-  getGames = async () => {
+  getDatas = async () => {
     const {
       data: {
-        data: { games },
+        data: {
+          megamall2: { customer },
+        },
       },
     } = await axios.get(
-      "https://raw.githubusercontent.com/didehdgns/react-app/master/json/jsondata.json"
+      "https://raw.githubusercontent.com/didehdgns/react-app/master/json/megamall2.json"
     );
-    console.log(games);
-    this.setState({ games: games, isLoading: false });
+    console.log(customer);
+    this.setState({ mall2: customer, isLoading: false });
   };
   async componentDidMount() {
-    this.getGames();
+    this.getDatas();
   }
   render() {
-    const { isLoading, games } = this.state;
+    const { isLoading, mall2 } = this.state;
     return (
       <section className="container">
         {isLoading ? (
@@ -33,15 +35,17 @@ class App extends React.Component {
           </div>
         ) : (
           <div className="games">
-            {games.map((games) => (
+            {mall2.map((mall2) => (
               <Game
-                key={games.id}
-                id={games.id}
-                year={games.year}
-                title={games.title}
-                summary={games.summary}
-                poster={games.cover_img}
-                genres={games.genres}
+                key={mall2.customerid}
+                id={mall2.customerid}
+                name={mall2.name}
+                job={mall2.job}
+                taste={mall2.taste}
+                residence={mall2.residence}
+                discovery={mall2.discovery}
+                quest={mall2.quest}
+                reward={mall2.reward}
               />
             ))}
           </div>

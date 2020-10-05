@@ -118,7 +118,7 @@
           "job": "무직",
           "taste": ["일용", "오락", "설비"],
           "residence": "우주선",
-          "visit": ["휴게소"],
+          "visit": ["휴게소", ""],
           "discovery": "",
           "quest": "",
           "reward": ""
@@ -140,7 +140,7 @@
           "job": "촌장",
           "taste": ["오락", "설비", "일용"],
           "residence": "주택가",
-          "visit": ["잡화점"],
+          "visit": ["잡화점", ""],
           "discovery": "",
           "quest": "",
           "reward": ""
@@ -184,7 +184,7 @@
           "job": "알바생",
           "taste": ["설비", "식사", "일용"],
           "residence": "주택가",
-          "visit": ["편의점"],
+          "visit": ["편의점", ""],
           "discovery": "",
           "quest": "",
           "reward": ""
@@ -206,7 +206,7 @@
           "job": "부장",
           "taste": ["일용", "전기", "미용"],
           "residence": "주택가",
-          "visit": ["생선 가게"],
+          "visit": ["생선 가게", ""],
           "discovery": "",
           "quest": "",
           "reward": ""
@@ -217,7 +217,7 @@
           "job": "CG디자이너",
           "taste": ["식사", "일용", "전기"],
           "residence": "주택가",
-          "visit": ["꽃집"],
+          "visit": ["꽃집", ""],
           "discovery": "",
           "quest": "",
           "reward": ""

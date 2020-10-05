@@ -2,7 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Game.css";
 
-function Game({ year, title, summary, poster, genres }) {
+function Game({
+  customerid,
+  name,
+  job,
+  taste,
+  residence,
+  visit,
+  discovery,
+  quest,
+  reward,
+}) {
   return (
     <div>
       <div>
@@ -15,20 +25,26 @@ function Game({ year, title, summary, poster, genres }) {
         </div>
       </div>
       <div className="game">
-        <img src={poster} alt={title} title={title} />
         <div className="game_data">
           <h3 className="game__title" style={{}}>
-            {title}
+            {name}
           </h3>
-          <h5 className="game__year">{year}</h5>
+          <h5 className="game__year">{job}</h5>
           <ul className="game__genres">
-            {genres.map((genre, index) => (
+            {taste.map((taste, index) => (
               <li key={index} className="genres__genre">
-                {genre}
+                {taste}
               </li>
             ))}
           </ul>
-          <p className="game__summary">{summary.slice(0, 180)}...</p>
+          <p className="game__summary">{residence}</p>
+          <ul className="game__genres">
+            {visit.map((visit, index2) => (
+              <li key={index2} className="genres__genre">
+                {visit}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
@@ -36,12 +52,15 @@ function Game({ year, title, summary, poster, genres }) {
 }
 
 Game.propTypes = {
-  id: PropTypes.number.isRequired,
-  year: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired,
-  summary: PropTypes.string.isRequired,
-  poster: PropTypes.string.isRequired,
-  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+  customerid: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  job: PropTypes.string.isRequired,
+  taste: PropTypes.arrayOf(PropTypes.string).isRequired,
+  residence: PropTypes.string.isRequired,
+  visit: PropTypes.arrayOf(PropTypes.string).isRequired,
+  discovery: PropTypes.string.isRequired,
+  quest: PropTypes.string.isRequired,
+  reward: PropTypes.string.isRequired,
 };
 
 export default Game;
