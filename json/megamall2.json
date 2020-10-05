@@ -1,0 +1,244 @@
+{
+  "data": {
+    "megamall2": {
+      "customer": [
+        {
+          "customerid": 1,
+          "name": "조택균",
+          "job": "학생",
+          "taste": ["일용", "오락", "설비"],
+          "residence": "상점가",
+          "visit": ["벌룬타워", "개방형쉼터"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 2,
+          "name": "차다임",
+          "job": "학생",
+          "taste": ["식사", "일용", "전기"],
+          "residence": "상점가",
+          "visit": ["화장실", "빵집"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 3,
+          "name": "정경명",
+          "job": "초등학생",
+          "taste": ["오락", "설비", "일용"],
+          "residence": "단지",
+          "visit": ["과자 가게", "장난감 가게"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 4,
+          "name": "연미경",
+          "job": "디자이너",
+          "taste": ["식사", "미용", "오락"],
+          "residence": "빌딩가",
+          "visit": ["코인 로커", "Wi-Fi 스폿"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 5,
+          "name": "김사우",
+          "job": "낚시꾼",
+          "taste": ["설비", "미용", "전기"],
+          "residence": "상점가",
+          "visit": ["편의점", "빵집"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 6,
+          "name": "설훈례",
+          "job": "가사 도우미",
+          "taste": ["설비", "일용", "오락"],
+          "residence": "상점가",
+          "visit": ["자동판매기", "공중전화"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 7,
+          "name": "카이로군",
+          "job": "비밀의 로봇",
+          "taste": ["식사", "오락", "설비"],
+          "residence": "단지",
+          "visit": ["병원 로봇", "연구소"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 8,
+          "name": "침팬G",
+          "job": "정치가",
+          "taste": ["설비", "식사", "일용"],
+          "residence": "사막",
+          "visit": ["과일 매장", "목욕탕"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 9,
+          "name": "아부파라 왕",
+          "job": "국왕",
+          "taste": ["식사", "일용", "전기"],
+          "residence": "사막",
+          "visit": ["부동산", "금낙타상"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 10,
+          "name": "펭귄",
+          "job": "스키 선수",
+          "taste": ["일용", "전기", "미용"],
+          "residence": "주택가",
+          "visit": ["수족관", "안경점"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 11,
+          "name": "지지철",
+          "job": "무직",
+          "taste": ["일용", "오락", "설비"],
+          "residence": "우주선",
+          "visit": ["휴게소"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 12,
+          "name": "남긱길",
+          "job": "식당점원",
+          "taste": ["식사", "일용", "전기"],
+          "residence": "주택가",
+          "visit": ["목욕탕", "햄버거 가게"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 13,
+          "name": "진종건",
+          "job": "촌장",
+          "taste": ["오락", "설비", "일용"],
+          "residence": "주택가",
+          "visit": ["잡화점"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 14,
+          "name": "임수홍",
+          "job": "골퍼",
+          "taste": ["식사", "미용", "오락"],
+          "residence": "주택가",
+          "visit": ["골프용품점", "공중전화"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 15,
+          "name": "남규하",
+          "job": "트레이너",
+          "taste": ["설비", "미용", "전기"],
+          "residence": "주택가",
+          "visit": ["시연 판매대", "카페"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 16,
+          "name": "백원근",
+          "job": "스턴트맨",
+          "taste": ["식사", "오락", "설비"],
+          "residence": "사막",
+          "visit": ["장어 전문점", "코인 로커"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 17,
+          "name": "윤범신",
+          "job": "알바생",
+          "taste": ["설비", "식사", "일용"],
+          "residence": "주택가",
+          "visit": ["편의점"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 18,
+          "name": "염문혁",
+          "job": "프로그래머",
+          "taste": ["식사", "일용", "전기"],
+          "residence": "주택가",
+          "visit": ["안경점", "부동산"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 19,
+          "name": "엄혁근",
+          "job": "부장",
+          "taste": ["일용", "전기", "미용"],
+          "residence": "주택가",
+          "visit": ["생선 가게"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        },
+        {
+          "customerid": 20,
+          "name": "선재빈",
+          "job": "CG디자이너",
+          "taste": ["식사", "일용", "전기"],
+          "residence": "주택가",
+          "visit": ["꽃집"],
+          "discovery": "",
+          "quest": "",
+          "reward": ""
+        }
+      ],
+      "store": [
+        {
+          "storeid": 1,
+          "storename": "과일 매장",
+          "storetype": "식사",
+          "storeiprice": "700~",
+          "storesize": "3x1",
+          "storebaseproprice": 3,
+          "storebasequality": 10,
+          "storebaserepute": 40,
+          "storebasestock": 10,
+          "storelevelupcost": [100, 150],
+          "storeserviceresearchheart": [5, 5, 25, 50, 70],
+          "storebasemaintenancecost": 8
+        }
+      ]
+    }
+  }
+}
