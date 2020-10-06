@@ -6,47 +6,54 @@ import "./App.css";
 class App extends React.Component {
   state = {
     isLoading: true,
-    mall2: [],
+    games: [],
+    login: false,
   };
 
-  getDatas = async () => {
+  getGames = async () => {
     const {
       data: {
-        data: {
-          megamall2: { customer },
-        },
+        data: { games },
       },
     } = await axios.get(
-      "https://raw.githubusercontent.com/didehdgns/react-app/master/json/megamall2.json"
+      "https://raw.githubusercontent.com/didehdgns/react-app/master/json/jsondata.json"
     );
-    console.log(customer);
-    this.setState({ mall2: customer, isLoading: false });
+    console.log(games);
+
+    this.setState({ games: games, isLoading: false, login: false });
   };
   async componentDidMount() {
-    this.getDatas();
+    this.getGames();
   }
   render() {
-    const { isLoading, mall2 } = this.state;
+    const { isLoading, login, games } = this.state;
+    console.log(login);
     return (
       <section className="container">
+        {login ? (
+          <div>
+            <span>로그인</span> <span>회원가입</span>
+          </div>
+        ) : (
+          <div>
+            <span>로그아웃</span>
+          </div>
+        )}
         {isLoading ? (
           <div className="loader">
             <span className="loader__text">Loading...</span>
           </div>
         ) : (
           <div className="games">
-            {mall2.map((mall2) => (
+            {games.map((games) => (
               <Game
-                key={mall2.id}
-                id={mall2.id}
-                name={mall2.name}
-                job={mall2.job}
-                visit={mall2.visit}
-                taste={mall2.taste}
-                residence={mall2.residence}
-                discovery={mall2.discovery}
-                quest={mall2.quest}
-                reward={mall2.reward}
+                key={games.id}
+                id={games.id}
+                year={games.year}
+                title={games.title}
+                summary={games.summary}
+                poster={games.cover_img}
+                genres={games.genres}
               />
             ))}
           </div>

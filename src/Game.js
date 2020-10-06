@@ -2,49 +2,24 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Game.css";
 
-function Game({
-  id,
-  name,
-  job,
-  taste,
-  residence,
-  visit,
-  discovery,
-  quest,
-  reward,
-}) {
+function Game({ year, title, summary, poster, genres }) {
   return (
     <div>
-      <div>
-        <div>
-          <ul>
-            <li>전략</li>
-            <li>시뮬레이션</li>
-            <li>롤플레잉</li>
-          </ul>
-        </div>
-      </div>
       <div className="game">
+        {/* <img src={poster} alt={title} title={title} /> */}
         <div className="game_data">
           <h3 className="game__title" style={{}}>
-            {name}
+            {title}
           </h3>
-          <h5 className="game__year">{job}</h5>
+          <h5 className="game__year">{year}</h5>
           <ul className="game__genres">
-            {taste.map((taste, index) => (
+            {genres.map((genre, index) => (
               <li key={index} className="genres__genre">
-                {taste}
+                {genre}
               </li>
             ))}
           </ul>
-          <p className="game__summary">{residence}</p>
-          <ul className="game__genres">
-            {visit.map((visit, index2) => (
-              <li key={index2} className="genres__genre">
-                {visit}
-              </li>
-            ))}
-          </ul>
+          <p className="game__summary">{summary.slice(0, 180)}...</p>
         </div>
       </div>
     </div>
@@ -53,14 +28,11 @@ function Game({
 
 Game.propTypes = {
   id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  job: PropTypes.string.isRequired,
-  taste: PropTypes.arrayOf(PropTypes.string).isRequired,
-  residence: PropTypes.string.isRequired,
-  visit: PropTypes.arrayOf(PropTypes.string).isRequired,
-  discovery: PropTypes.string.isRequired,
-  quest: PropTypes.string.isRequired,
-  reward: PropTypes.string.isRequired,
+  year: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  summary: PropTypes.string.isRequired,
+  poster: PropTypes.string.isRequired,
+  genres: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Game;
