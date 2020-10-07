@@ -20,6 +20,48 @@ body,
   justify-content: center;
 }
 
+.header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+}
+.header > .headerleft,
+.header > .headerright {
+  display: flex;
+}
+.header > .headerleft > li,
+.header > .headerright > li {
+  margin-left: 20px;
+  list-style: none;
+}
+
+.header > .headerleft {
+  margin-left: 0;
+  margin-right: auto;
+}
+.header > .headerleft > li {
+  font-size: 1.5em;
+}
+.header > .headerright > li {
+  font-size: 1.3em;
+}
+.header > .headerright > li > .vscsearch {
+  font-size: 1em;
+  position: absolute;
+  margin-left: 5px;
+  height: 30px;
+}
+.header > .headerright > li > input {
+  padding-left: 30px;
+  font-size: 1em;
+}
+.header > .headerright {
+  margin-right: 0;
+  margin-left: auto;
+  padding-right: 50px;
+}
+
 .loader {
   width: 100%;
   height: 100%;

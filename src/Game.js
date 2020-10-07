@@ -6,7 +6,7 @@ function Game({ year, title, summary, poster, genres }) {
   return (
     <div>
       <div className="game">
-        {/* <img src={poster} alt={title} title={title} /> */}
+        <img src={poster} alt={title} title={title} />
         <div className="game_data">
           <h3 className="game__title" style={{}}>
             {title}

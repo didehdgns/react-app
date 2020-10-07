@@ -2,12 +2,13 @@ import React from "react";
 import axios from "axios";
 import Game from "./Game";
 import "./App.css";
+import { MdGames } from "react-icons/md";
+import { VscSearch } from "react-icons/vsc";
 
 class App extends React.Component {
   state = {
     isLoading: true,
     games: [],
-    login: false,
   };
 
   getGames = async () => {
@@ -20,42 +21,52 @@ class App extends React.Component {
     );
     console.log(games);
 
-    this.setState({ games: games, isLoading: false, login: false });
+    this.setState({ games: games, isLoading: false });
   };
   async componentDidMount() {
     this.getGames();
   }
   render() {
-    const { isLoading, login, games } = this.state;
-    console.log(login);
+    const { isLoading, games } = this.state;
+
     return (
       <section className="container">
-        {login ? (
-          <div>
-            <span>로그인</span> <span>회원가입</span>
-          </div>
-        ) : (
-          <div>
-            <span>로그아웃</span>
-          </div>
-        )}
         {isLoading ? (
           <div className="loader">
             <span className="loader__text">Loading...</span>
           </div>
         ) : (
-          <div className="games">
-            {games.map((games) => (
-              <Game
-                key={games.id}
-                id={games.id}
-                year={games.year}
-                title={games.title}
-                summary={games.summary}
-                poster={games.cover_img}
-                genres={games.genres}
-              />
-            ))}
+          <div>
+            <div className="header">
+              <ul className="headerleft">
+                <li>
+                  <MdGames className="mdgames" />
+                </li>
+                <li>GAMEGO!</li>
+              </ul>
+
+              <ul className="headerright">
+                <li>
+                  <VscSearch className="vscsearch" />
+                  <input type="text" placeholder="원하는 게임을 입력하세요" />
+                </li>
+                <li>로그인</li>
+                <li>회원가입</li>
+              </ul>
+            </div>
+            <div className="games">
+              {games.map((games) => (
+                <Game
+                  key={games.id}
+                  id={games.id}
+                  year={games.year}
+                  title={games.title}
+                  summary={games.summary}
+                  poster={games.cover_img}
+                  genres={games.genres}
+                />
+              ))}
+            </div>
           </div>
         )}
       </section>
