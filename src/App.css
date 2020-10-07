@@ -47,7 +47,7 @@ body,
   font-size: 1.3em;
 }
 .header > .headerright > li > .vscsearch {
-  font-size: 1em;
+  font-size: 0.9em;
   position: absolute;
   margin-left: 5px;
   height: 30px;
