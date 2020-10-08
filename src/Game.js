@@ -2,10 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./Game.css";
 
-function Game({ year, title, summary, poster, genres }) {
+function Game({ year, title, etitle, summary, poster, genres }) {
   return (
     <div className="game">
-      <img src={poster} alt={title} title={title} />
+      <img
+        src={poster}
+        alt={title}
+        title={title}
+        href={"../gameinfo/" + etitle}
+      />
       <div className="game_data">
         <h3 className="game__title" style={{}}>
           {title}
@@ -28,6 +33,7 @@ Game.propTypes = {
   id: PropTypes.number.isRequired,
   year: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
+  etitle: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,

@@ -4,6 +4,7 @@
       {
         "id": 1,
         "title": "사이버 펑크 2077",
+        "etitle": "Cyber_punk_2077",
         "year": 2020,
         "userscore": 4.5,
         "cover_img": "https://github.com/didehdgns/react-app/blob/master/img/Cyber_punk_2077.jpg?raw=true",
@@ -13,6 +14,7 @@
       {
         "id": 2,
         "title": "폴 가이즈",
+        "etitle": "Fall_guys_ultimate_knockout",
         "year": 2020,
         "userscore": 4.6,
         "cover_img": "https://github.com/didehdgns/react-app/blob/master/img/Fall_guys_ultimate_knockout.jpg?raw=true",
@@ -22,6 +24,7 @@
       {
         "id": 3,
         "title": "더 위쳐 3: 와일드 헌터",
+        "etitle": "The_witcher_3_wild_hunt",
         "year": 2015,
         "userscore": 4.0,
         "cover_img": "https://github.com/didehdgns/react-app/blob/master/img/The_witcher_3_wild_hunt.jpg?raw=true",
@@ -31,6 +34,7 @@
       {
         "id": 4,
         "title": "하스스톤",
+        "etitle": "HearthStone",
         "year": 2015,
         "userscore": 4.0,
         "cover_img": "https://github.com/didehdgns/react-app/blob/master/img/HearthStone.png?raw=true",
@@ -40,6 +44,7 @@
       {
         "id": 5,
         "title": "바바 이즈 유",
+        "etitle": "Baba_is_you",
         "year": 2019,
         "userscore": 4.0,
         "cover_img": "https://github.com/didehdgns/react-app/blob/master/img/Baba_is_you.jpg?raw=true",

@@ -60,6 +60,7 @@ class App extends React.Component {
                   key={games.id}
                   id={games.id}
                   year={games.year}
+                  etitle={games.etitle}
                   title={games.title}
                   summary={games.summary}
                   poster={games.cover_img}
