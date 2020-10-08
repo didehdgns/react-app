@@ -5,12 +5,7 @@ import "./Game.css";
 function Game({ year, title, etitle, summary, poster, genres }) {
   return (
     <div className="game">
-      <img
-        src={poster}
-        alt={title}
-        title={title}
-        href={"../gameinfo/" + etitle}
-      />
+      <img src={poster} alt={title} title={title} />
       <div className="game_data">
         <h3 className="game__title" style={{}}>
           {title}
@@ -23,7 +18,7 @@ function Game({ year, title, etitle, summary, poster, genres }) {
             </li>
           ))}
         </ul>
-        <p className="game__summary">{summary.slice(0, 180)}...</p>
+        <p className="game__summary">{summary.slice(0, 120)}...</p>
       </div>
     </div>
   );
