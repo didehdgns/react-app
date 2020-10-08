@@ -10,9 +10,9 @@ const site = [
   },
   {
     id: 2,
-    name: "React Icons",
-    url: "https://react-icons.github.io/",
-    using: "import {iconname} from 'react-icon/xx' <iconname className=''/>",
+    name: "React Navigation",
+    url: "https://syoung-journey.tistory.com/40?category=867658",
+    using: "게시글 확인",
   },
   {
     id: 3,
