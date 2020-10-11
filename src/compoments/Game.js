@@ -3,7 +3,21 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import "./Game.css";
 
-function Game({ year, title, etitle, summary, poster, genres }) {
+function Game({
+  year,
+  title,
+  etitle,
+  summary,
+  poster,
+  genres,
+  supportLang,
+  grade,
+  platform,
+  rdate,
+  product,
+  distributor,
+  userscore,
+}) {
   return (
     <Link
       to={{
@@ -15,6 +29,13 @@ function Game({ year, title, etitle, summary, poster, genres }) {
           summary,
           poster,
           genres,
+          supportLang,
+          grade,
+          platform,
+          rdate,
+          product,
+          distributor,
+          userscore,
         },
       }}
     >
@@ -41,9 +62,16 @@ function Game({ year, title, etitle, summary, poster, genres }) {
 
 Game.propTypes = {
   id: PropTypes.number.isRequired,
-  year: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   etitle: PropTypes.string.isRequired,
+  year: PropTypes.number.isRequired,
+  rdate: PropTypes.string.isRequired,
+  userscore: PropTypes.number.isRequired,
+  supportLang: PropTypes.string.isRequired,
+  grade: PropTypes.string.isRequired,
+  platform: PropTypes.string.isRequired,
+  product: PropTypes.string.isRequired,
+  distributor: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,

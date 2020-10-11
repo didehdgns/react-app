@@ -15,7 +15,7 @@ class Home extends React.Component {
         data: { games },
       },
     } = await axios.get(
-      "https://raw.githubusercontent.com/didehdgns/react-app/master/json/jsondata.json"
+      "https://raw.githubusercontent.com/didehdgns/react-app/happy/json/jsondata.json"
     );
     console.log(games);
 
@@ -40,11 +40,18 @@ class Home extends React.Component {
                 key={games.id}
                 id={games.id}
                 year={games.year}
+                rdate={games.rdate}
                 etitle={games.etitle}
                 title={games.title}
                 summary={games.summary}
                 poster={games.cover_img}
                 genres={games.genres}
+                userscore={games.userscore}
+                supportLang={games.supportLang}
+                grade={games.grade}
+                platform={games.platform}
+                product={games.product}
+                distributor={games.distributor}
               />
             ))}
           </div>

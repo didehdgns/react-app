@@ -21,6 +21,11 @@
 }
 .header > .headerleft > li {
   font-size: 1.5em;
+  color: black;
+}
+.header > .headerleft > li > a {
+  text-decoration: none;
+  color: black;
 }
 .header > .headerright > li {
   font-size: 1.3em;

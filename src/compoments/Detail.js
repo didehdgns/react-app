@@ -23,52 +23,61 @@ class Detail extends React.Component {
             <h1 className="detail_game__title" style={{}}>
               {location.state.title}
             </h1>
-            <div>
-              <ul>
+            <div className="detail_game_rating">
+              <ul className="detail_game_rating_left">
                 <li>
                   <h2>게임 소개</h2>
                 </li>
               </ul>
-              <ul>
-                <li>리뷰</li>
-                <li>평점</li>
-                <li>{location.state.userscore}</li>
+              <ul className="detail_game_rating_right">
+                <li>
+                  <h2>리뷰</h2>
+                </li>
+                <ul className="detail_game_rating_right_count">
+                  <li>
+                    <h2>평점</h2>
+                  </li>
+                  <li>
+                    <h3>{location.state.userscore}</h3>
+                  </li>
+                </ul>
               </ul>
             </div>
             <h3 className="detail_game__summary">{location.state.summary}</h3>
-
-            <ul className="detail_game__genres">
-              <li>장르</li>
-              {location.state.genres.map((genres, index) => (
-                <li key={index} className="detail_genres__genre">
-                  {genres}
-                </li>
-              ))}
-            </ul>
-            <ul>
-              <li>언어</li>
-              <li>{location.state.supportLang}</li>
-            </ul>
-            <ul>
-              <li>등급</li>
-              <li>{location.state.grade}</li>
-            </ul>
-            <ul>
-              <li>플랫폼</li>
-              <li>{location.state.platform}</li>
-            </ul>
-            <ul>
-              <li>출시</li>
-              <li>{location.state.rdate}</li>
-            </ul>
-            <ul>
-              <li>제작</li>
-              <li>{location.state.product}</li>
-            </ul>
-            <ul>
-              <li>배금</li>
-              <li>{location.state.distributor}</li>
-            </ul>
+            <div className="detail_game_about">
+              <ul className="detail_game__genres">
+                <li className="detail_game__genres_name">장르</li>
+                {location.state.genres.map((genres, index) => (
+                  <li key={index} className="detail_genres__genre">
+                    {genres}
+                  </li>
+                ))}
+              </ul>
+              <ul className="detail_game__genres">
+                <li className="detail_game__genres_name">언어</li>
+                <li>{location.state.supportLang}</li>
+              </ul>
+              <ul className="detail_game__genres">
+                <li className="detail_game__genres_name">등급</li>
+                <li>{location.state.grade}</li>
+              </ul>
+              <ul className="detail_game__genres">
+                <li className="detail_game__genres_name">플랫폼</li>
+                <li>{location.state.platform}</li>
+              </ul>
+              <ul className="detail_game__genres">
+                <li className="detail_game__genres_name">출시</li>
+                <li>{location.state.rdate}</li>
+              </ul>
+              <ul className="detail_game__genres">
+                <li className="detail_game__genres_name">제작</li>
+                <li>{location.state.product}</li>
+              </ul>
+              <ul className="detail_game__genres">
+                <li className="detail_game__genres_name">배금</li>
+                <li>{location.state.distributor}</li>
+              </ul>
+            </div>
           </div>
         </div>
       );
