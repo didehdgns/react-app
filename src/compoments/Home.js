@@ -11,12 +11,8 @@ class Home extends React.Component {
 
   getGames = async () => {
     const {
-      data: {
-        data: { games },
-      },
-    } = await axios.get(
-      "https://raw.githubusercontent.com/didehdgns/react-app/happy/json/jsondata.json"
-    );
+      data: { games },
+    } = await axios.get("https://game-app-9c71b.firebaseio.com/data.json");
     console.log(games);
 
     this.setState({ games: games, isLoading: false });

@@ -15,10 +15,12 @@ html,
 body,
 .container {
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
 #potato {
+  width: 80%;
   height: 100%;
   justify-content: center;
 }

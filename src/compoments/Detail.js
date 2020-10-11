@@ -47,35 +47,47 @@ class Detail extends React.Component {
             <div className="detail_game_about">
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">장르</li>
-                {location.state.genres.map((genres, index) => (
-                  <li key={index} className="detail_genres__genre">
-                    {genres}
-                  </li>
-                ))}
+                <ul className="detail_game__genres2">
+                  {location.state.genres.map((genres, index) => (
+                    <li key={index}>{genres}</li>
+                  ))}
+                </ul>
               </ul>
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">언어</li>
-                <li>{location.state.supportLang}</li>
+                <li className="detail_game__genres_name2">
+                  {location.state.supportLang}
+                </li>
               </ul>
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">등급</li>
-                <li>{location.state.grade}</li>
+                <li className="detail_game__genres_name2">
+                  {location.state.grade}
+                </li>
               </ul>
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">플랫폼</li>
-                <li>{location.state.platform}</li>
+                <li className="detail_game__genres_name2">
+                  {location.state.platform}
+                </li>
               </ul>
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">출시</li>
-                <li>{location.state.rdate}</li>
+                <li className="detail_game__genres_name2">
+                  {location.state.rdate}
+                </li>
               </ul>
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">제작</li>
-                <li>{location.state.product}</li>
+                <li className="detail_game__genres_name2">
+                  {location.state.product}
+                </li>
               </ul>
               <ul className="detail_game__genres">
-                <li className="detail_game__genres_name">배금</li>
-                <li>{location.state.distributor}</li>
+                <li className="detail_game__genres_name">배급</li>
+                <li className="detail_game__genres_name2">
+                  {location.state.distributor}
+                </li>
               </ul>
             </div>
           </div>

@@ -16,9 +16,9 @@ const site = [
   },
   {
     id: 3,
-    name: "React Icons",
-    url: "https://react-icons.github.io/",
-    using: "import {iconname} from 'react-icon/xx' <iconname className=''/>",
+    name: "React firebase Login",
+    url: "https://www.youtube.com/watch?v=cFgoSrOui2M&ab_channel=h3webdevtuts",
+    using: "동영상 확인",
   },
 ];
 
