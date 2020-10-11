@@ -13,25 +13,62 @@ class Detail extends React.Component {
     const { location } = this.props;
     if (location.state) {
       return (
-        <div className="game">
+        <div className="detail">
           <img
             src={location.state.poster}
             alt={location.state.title}
             title={location.state.title}
           />
-          <div className="game_data">
-            <h3 className="game__title" style={{}}>
+          <div className="detail_game_data">
+            <h1 className="detail_game__title" style={{}}>
               {location.state.title}
-            </h3>
-            <h5 className="game__year">{location.state.year}</h5>
-            <ul className="game__genres">
+            </h1>
+            <div>
+              <ul>
+                <li>
+                  <h2>게임 소개</h2>
+                </li>
+              </ul>
+              <ul>
+                <li>리뷰</li>
+                <li>평점</li>
+                <li>{location.state.userscore}</li>
+              </ul>
+            </div>
+            <h3 className="detail_game__summary">{location.state.summary}</h3>
+
+            <ul className="detail_game__genres">
+              <li>장르</li>
               {location.state.genres.map((genres, index) => (
-                <li key={index} className="genres__genre">
+                <li key={index} className="detail_genres__genre">
                   {genres}
                 </li>
               ))}
             </ul>
-            <p className="game__summary">{location.state.summary}</p>
+            <ul>
+              <li>언어</li>
+              <li>{location.state.supportLang}</li>
+            </ul>
+            <ul>
+              <li>등급</li>
+              <li>{location.state.grade}</li>
+            </ul>
+            <ul>
+              <li>플랫폼</li>
+              <li>{location.state.platform}</li>
+            </ul>
+            <ul>
+              <li>출시</li>
+              <li>{location.state.rdate}</li>
+            </ul>
+            <ul>
+              <li>제작</li>
+              <li>{location.state.product}</li>
+            </ul>
+            <ul>
+              <li>배금</li>
+              <li>{location.state.distributor}</li>
+            </ul>
           </div>
         </div>
       );

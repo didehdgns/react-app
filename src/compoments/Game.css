@@ -8,7 +8,7 @@
   width: 80%;
 }
 
-.games .game {
+.games a .game {
   width: 100%;
   background-color: white;
   margin-bottom: 70px;
@@ -23,7 +23,7 @@
     0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
 }
 
-.game img {
+.games .game img {
   position: relative;
   top: -50px;
   max-width: 150px;
@@ -33,19 +33,23 @@
     0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
 
-.game .game_title,
-.game .game__year {
+.games > a {
+  width: 45%;
+  text-decoration: none;
+}
+.games .game .game_title,
+.games .game .game__year {
   margin: 0;
   font-weight: 300;
 }
 
-.game .game_title {
+.games .game .game_title {
   margin-bottom: 5px;
   font-size: 24px;
   color: #2c2c2c;
 }
 
-.game .game__genres {
+.games .game__genres {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -53,7 +57,7 @@
   margin: 5px 0;
 }
 
-.game__genres li {
+.games .game__genres li {
   margin-right: 10px;
   font-size: 14px;
 }

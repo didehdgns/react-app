@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { MdGames } from "react-icons/md";
 import { VscSearch } from "react-icons/vsc";
+import "./Navigation.css";
 
 function Navigation() {
   return (

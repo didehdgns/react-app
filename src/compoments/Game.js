@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import "../Game.css";
+import "./Game.css";
 
 function Game({ year, title, etitle, summary, poster, genres }) {
   return (

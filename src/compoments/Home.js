@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Game from "./Game";
-import "../App.css";
+import "./App.css";
 
 class Home extends React.Component {
   state = {
