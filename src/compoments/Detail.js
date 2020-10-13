@@ -90,6 +90,74 @@ class Detail extends React.Component {
                 </li>
               </ul>
             </div>
+            <div className="detail_game_about_system">
+              <div className="detail_game_about_system_min">
+                <span>최소 사양</span>
+                <ul className="detail_game__genres">
+                  <li className="detail_game__genres_name">OS</li>
+                  <li className="detail_game__genres_name2">
+                    {location.state.minOS}
+                  </li>
+                </ul>
+                <ul className="detail_game__genres">
+                  <li className="detail_game__genres_name">CPU</li>
+                  <li className="detail_game__genres_name2">
+                    {location.state.minCPU}
+                  </li>
+                </ul>
+                <ul className="detail_game__genres">
+                  <li className="detail_game__genres_name">그래픽</li>
+                  <li className="detail_game__genres_name2">
+                    {location.state.minGraphic}
+                  </li>
+                </ul>
+                <ul className="detail_game__genres">
+                  <li className="detail_game__genres_name">메모리</li>
+                  <li className="detail_game__genres_name2">
+                    {location.state.minMemory}
+                  </li>
+                </ul>
+                <ul className="detail_game__genres">
+                  <li className="detail_game__genres_name">저장공간</li>
+                  <li className="detail_game__genres_name2">
+                    {location.state.minStorage}
+                  </li>
+                </ul>
+              </div>
+              <div className="detail_game_about_system_rec">
+                <span>권장 사양</span>
+                <ul className="detail_game__genres">
+                  <li className="detail_game__genres_name">OS</li>
+                  <li className="detail_game__genres_name2">
+                    {location.state.recOS}
+                  </li>
+                </ul>
+                <ul className="detail_game__genres">
+                  <li className="detail_game__genres_name">CPU</li>
+                  <li className="detail_game__genres_name2">
+                    {location.state.recCPU}
+                  </li>
+                </ul>
+                <ul className="detail_game__genres">
+                  <li className="detail_game__genres_name">그래픽</li>
+                  <li className="detail_game__genres_name2">
+                    {location.state.recGraphic}
+                  </li>
+                </ul>
+                <ul className="detail_game__genres">
+                  <li className="detail_game__genres_name">메모리</li>
+                  <li className="detail_game__genres_name2">
+                    {location.state.recMemory}
+                  </li>
+                </ul>
+                <ul className="detail_game__genres">
+                  <li className="detail_game__genres_name">저장공간</li>
+                  <li className="detail_game__genres_name2">
+                    {location.state.recStorage}
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       );

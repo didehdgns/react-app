@@ -36,6 +36,16 @@ function Game({
           product,
           distributor,
           userscore,
+          minOS,
+          minCPU,
+          minGraphic,
+          minMemory,
+          minStorage,
+          recOS,
+          recCPU,
+          recGraphic,
+          recMemory,
+          recStorage
         },
       }}
     >
@@ -75,6 +85,16 @@ Game.propTypes = {
   summary: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
   genres: PropTypes.arrayOf(PropTypes.string).isRequired,
+  minOS : PropTypes.string.isRequired,
+  minCPU : PropTypes.string.isRequired,
+  minGraphic: PropTypes.string.isRequired,
+  minMemory: PropTypes.string.isRequired,
+  minStorage: PropTypes.string.isRequired,
+  recOS: PropTypes.string.isRequired,
+  recCPU: PropTypes.string.isRequired,
+  recGraphic: PropTypes.string.isRequired,
+  recMemory: PropTypes.string.isRequired,
+  recStorage: PropTypes.string.isRequired
 };
 
 export default Game;

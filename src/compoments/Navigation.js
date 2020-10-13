@@ -4,6 +4,7 @@ import { MdGames } from "react-icons/md";
 import { VscSearch } from "react-icons/vsc";
 import "./Navigation.css";
 import fire from "./fire";
+import app from 'firebase/app'
 
 const Navigation = () => {
   const [user, setUser] = useState("");
@@ -98,44 +99,13 @@ const Navigation = () => {
             <input type="text" placeholder="원하는 게임을 입력하세요" />
           </li>
           {user ? (
-            <ul>
-              <li handleLogout={handleLogout}>로그아웃</li>
+            <ul className="headerlogout">
+              <li onClick={() => app.auth().signOut()}>로그아웃</li>
             </ul>
           ) : (
-            <ul>
+            <ul className="headerlogin">
               <li>
-                <Link
-                  to="/Login"
-                  email={email}
-                  setEmail={setEmail}
-                  password={password}
-                  setPassword={setPassword}
-                  handleLogin={handleLogin}
-                  handleSignup={handleSignup}
-                  hasAccount={hasAccount}
-                  setHasAccount={setHasAccount}
-                  emailError={emailError}
-                  passwordError={passwordError}
-                >
-                  로그인
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/Registor"
-                  email={email}
-                  setEmail={setEmail}
-                  password={password}
-                  setPassword={setPassword}
-                  handleLogin={handleLogin}
-                  handleSignup={handleSignup}
-                  hasAccount={hasAccount}
-                  setHasAccount={setHasAccount}
-                  emailError={emailError}
-                  passwordError={passwordError}
-                >
-                  회원가입
-                </Link>
+                <Link to="/Registor">로그인/회원가입</Link>
               </li>
             </ul>
           )}

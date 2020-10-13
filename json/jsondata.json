@@ -15,7 +15,17 @@
         "distributor": "H2 인터렉티브",
         "cover_img": "https://github.com/didehdgns/react-app/blob/master/img/Cyber_punk_2077.jpg?raw=true",
         "genres": ["오픈월드", "액션", "RPG"],
-        "summary": "사이버펑크 2077은 권력, 사치와 신체 개조에 집착하는 거대 도시 나이트 시티를 배경으로 한 오픈 월드, 액션 어드벤처 게임입니다. 사이버펑크가 되어 나이트 시티의 새로운 전설을 써보세요."
+        "summary": "사이버펑크 2077은 권력, 사치와 신체 개조에 집착하는 거대 도시 나이트 시티를 배경으로 한 오픈 월드, 액션 어드벤처 게임입니다. 사이버펑크가 되어 나이트 시티의 새로운 전설을 써보세요.",
+        "minOS":"Windows 7 or 10",
+        "minCPU":"Intel Core i5-3570K or AMD FX-8310",
+        "minGraphic":"NVIDIA GeForce GTX 780 or AMD Radeon RX 470",
+        "minMemory":"8GB",
+        "minStorage":"70GB 사용 가능 공간",
+        "recOS":"Windows 10",
+        "recCPU":"Intel Core i7-4790 or AMD Ryzen 3 3200G",
+        "recGraphic":"NVIDIA GeForce GTX 1060 or AMD Radeon R9 Fury",
+        "recMemory":"12GB",
+        "recStorage": "70GB 사용 가능 공간"
       },
       {
         "id": 2,

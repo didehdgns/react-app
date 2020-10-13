@@ -45,3 +45,14 @@
   margin-left: auto;
   padding-right: 50px;
 }
+
+.header > .headerright > .headerlogin,
+.header > .headerright > .headerlogout {
+  list-style: none;
+}
+.header > .headerright > .headerlogin > li > a,
+.header > .headerright > .headerlogout {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+}

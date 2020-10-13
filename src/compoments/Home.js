@@ -48,6 +48,16 @@ class Home extends React.Component {
                 platform={games.platform}
                 product={games.product}
                 distributor={games.distributor}
+                minOS={games.minOS}
+                minCPU={games.minCPU}
+                minGraphic={games.minGraphic}
+                minMemory={games.minMemory}
+                minStorage={games.minStorage}
+                recOS={games.recOS}
+                recCPU={games.recCPU}
+                recGraphic={games.recGraphic}
+                recMemory={games.recMemory}
+                recStorage={games.recStorage}
               />
             ))}
           </div>
