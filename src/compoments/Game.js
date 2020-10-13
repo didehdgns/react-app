@@ -17,6 +17,16 @@ function Game({
   product,
   distributor,
   userscore,
+  minOS,
+  minCPU,
+  minGraphic,
+  minMemory,
+  minStorage,
+  recOS,
+  recCPU,
+  recGraphic,
+  recMemory,
+  recStorage
 }) {
   return (
     <Link

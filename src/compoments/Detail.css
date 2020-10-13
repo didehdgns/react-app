@@ -89,24 +89,45 @@
   width: 50%;
 }
 .detail_game__genres li {
-  margin-right: 10px;
   font-size: 14px;
 }
 .detail_game__genres2 {
   display: flex;
   list-style: none;
-  margin-left: -10px;
   padding: 0;
+}
+
+.detail_game__genres2 li {
+  margin-right: 10px;
 }
 
 .detail_game__genres_name {
   width: 25%;
-  margin-right: 0;
 }
 .detail_game__genres_name2 {
   width: 90%;
+  color: black;
 }
+
 .detail_genres__genre,
 .detail_game__summary {
   color: #5a5b57;
+}
+
+.detail_game_about_system {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+}
+.detail_game_about_system_min,
+.detail_game_about_system_rec {
+  width: 100%;
+}
+
+.detail_game_about_system_min > span,
+.detail_game_about_system_rec > span {
+  color: black;
 }

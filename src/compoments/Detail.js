@@ -47,7 +47,7 @@ class Detail extends React.Component {
             <div className="detail_game_about">
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">장르</li>
-                <ul className="detail_game__genres2">
+                <ul className="detail_game__genres_name2 detail_game__genres2">
                   {location.state.genres.map((genres, index) => (
                     <li key={index}>{genres}</li>
                   ))}
