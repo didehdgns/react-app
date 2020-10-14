@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Detail.css";
 
 class Detail extends React.Component {
@@ -11,6 +12,8 @@ class Detail extends React.Component {
   }
   render() {
     const { location } = this.props;
+    console.log(location.state)
+    console.log(this.props.history)
     if (location.state) {
       return (
         <div className="detail">
@@ -31,7 +34,9 @@ class Detail extends React.Component {
               </ul>
               <ul className="detail_game_rating_right">
                 <li>
-                  <h2>리뷰</h2>
+                  <h2><Link to={{pathname:`/game/${location.state.etitle}/Review`,
+                
+                }}>리뷰</Link></h2>
                 </li>
                 <ul className="detail_game_rating_right_count">
                   <li>
