@@ -5,7 +5,8 @@ import Detail from "./compoments/Detail";
 import Navigation from "./compoments/Navigation";
 import Login from "./compoments/Login";
 import Registor from "./compoments/Registor";
-import Review from './compoments/Review'
+import Review from './compoments/Review';
+import Search from './compoments/Search';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/" exact={true} component={Home} />
       <Route path="/game/:etitle" component={Detail} />
       <Route path="/game/:etitle/review" component={Review}/>
+      <Route path="Search" component={Search} />
       <Route path="/Login" component={Login} />
       <Route path="/Registor" component={Registor} />
     </HashRouter>
