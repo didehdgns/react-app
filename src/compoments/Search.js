@@ -2,70 +2,110 @@ import React from 'react';
 import { VscSearch } from "react-icons/vsc";
 import './Search.css';
 import axios from 'axios'
+import SearchGame from './SearchGame';
 
 class Search extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            query: '',
-            results: {},
-            loading: false,
-            message: ''
-        }
+    state = {
+        isLoading:true,
+        games:[],
+        value:""
+    };
 
-        this.cancel = '';
-    }
-
-    fetchSearchResults = (updatedPageNo = '', query) => {
-        const pageNumber = updatedPageNo ? `&page=${updatedPageNo}` : '';
-        const searchUrl = `https://game-app-9c71b.firebaseio.com/data/games/${query}.json`
-
-        if( this.cancel){
-            this.cancel.cancel();
-        }
-        this.cancel = axios.CancelToken.source();
-
-        axios.get(searchUrl, {
-            cancelToken: this.cancel.token
-        })
-        .then(res => {
-            // const resultNotfoundMsg = 
-            console.warn(res.data);
-        })
-        .catch(error => {
-            if(axios.isCancel(error) || error){
-                this.setState({
-                    loading:false,
-                    message: 'Faled to fetch the data, Please check network'
-                })
-            }
-        })
-    }
-    handleOnInputChange = (event) => {
-        const query = event.target.value;
-        this.setState( {query:query, loading: true, message: ''},() => {
-            this.fetchSearchResults(1, query);
-        });
+    getSearchGame = async () => {
         
-      };
+        const search = this.state.value;
+        try {
+            if (search === ""){
+                this.setState({games:[], isLoading: false})
+            } else {
+                const {data: {
+            games}} = await axios.get('https://game-app-9c71b.firebaseio.com/data.json',{
+                param:{
+                    query: search,
+                    
+                }
+                
+            });
+            this.setState({games: games, isLoading:false});
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    componentDidMount(){
+        this.getSearchGame();
+    }
+
+    handleChange = (e: any) =>{
+        this.setState({value: e.target.value});
+        console.log(e.target.value);
+        
+    };
+
+    handleSubmit = (e: any) => {
+        e.preventDefault();
+        this.getSearchGame();
+    };
+
     render(){
-        const {query} = this.state;
-       
+        const {games, isLoading} = this.state;
         return (
-            <div className="search_container">
-                <h2 className="search_heading">
-                    Live Search: React Application
-                </h2>
-                <label className="search_label" htmlFor="search-input">
-                    <input type="Text"
-                    name="query"
-                    value={query}
-                    id="search-input"
-                    placeholder="Search..."
-                    onChange={this.handleOnInputChange}></input>
-                    <VscSearch className="search_icon" />
-                </label>
-            </div>
+            <selection className="container">
+                {
+                    isLoading ? (
+                        <div className="loader">
+                            <span className="loader__text">Loading...</span>
+                        </div>
+                    ) : (
+                        <form onSubmit={this.handleSubmit}>
+                            <div>
+                                <div className="input_div">
+                                    <h1>게임 검색</h1>
+                                    <input 
+                                    className="input_search"
+                                    type="text"
+                                    value={this.state.value}
+                                    onChange={this.handleChange} placeholder="원하는 게임을 입력하세요"
+                                    />
+                                </div>
+                                <div className="games">
+                                    {games.map((game) =>(
+                                        <SearchGame
+                                            key={game.id}
+                                            id={game.id}
+                                            year={game.year}
+                                            rdate={game.rdate}
+                                            etitle={game.etitle}
+                                            title={game.title}
+                                            summary={game.summary}
+                                            poster={game.cover_img}
+                                            genres={game.genres}
+                                            userscore={game.userscore}
+                                            supportLang={game.supportLang}
+                                            grade={game.grade}
+                                            platform={game.platform}
+                                            product={game.product}
+                                            distributor={game.distributor}
+                                            minOS={game.minOS}
+                                            minCPU={game.minCPU}
+                                            minGraphic={game.minGraphic}
+                                            minMemory={game.minMemory}
+                                            minStorage={game.minStorage}
+                                            recOS={game.recOS}
+                                            recCPU={game.recCPU}
+                                            recGraphic={game.recGraphic}
+                                            recMemory={game.recMemory}
+                                            recStorage={game.recStorage}
+                                            />
+
+                                    ))}
+                                </div>
+                            </div>
+                        </form>
+                    )
+                }
+            </selection>
         )
     }
 }

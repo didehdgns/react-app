@@ -95,6 +95,7 @@ const Navigation = () => {
 
         <ul className="headerright">
           <li>
+            <Link to="/Search">검색</Link>
             <VscSearch className="vscsearch" />
             <input type="text" placeholder="원하는 게임을 입력하세요" />
           </li>
