@@ -31,7 +31,7 @@ function Game({
   return (
     <Link
       to={{
-        pathname: `/game/${etitle}`,
+        pathname: `/game/${etitle}/About`,
         state: {
           year,
           title,

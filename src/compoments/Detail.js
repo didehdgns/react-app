@@ -3,28 +3,39 @@ import { Link } from "react-router-dom";
 import "./Detail.css";
 
 class Detail extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      item : this.props.location.state,
+    }
+  }
   componentDidMount() {
     console.log(this.props);
     const { location, history } = this.props;
     if (location.state === undefined) {
       history.push("/"); // home으로 가기
     }
+    
   }
   render() {
+    const item = this.state.item;
+
+    const gen = [item.genres];
     const { location } = this.props;
+   
     console.log(location.state)
     console.log(this.props.history)
     if (location.state) {
       return (
         <div className="detail">
           <img
-            src={location.state.poster}
-            alt={location.state.title}
-            title={location.state.title}
+            src={item.poster}
+            alt={item.title}
+            title={item.title}
           />
           <div className="detail_game_data">
             <h1 className="detail_game__title" style={{}}>
-              {location.state.title}
+              {item.title}
             </h1>
             <div className="detail_game_rating">
               <ul className="detail_game_rating_left">
@@ -34,26 +45,51 @@ class Detail extends React.Component {
               </ul>
               <ul className="detail_game_rating_right">
                 <li>
-                  <h2><Link to={{pathname:`/game/${location.state.etitle}/Review`,
-                
-                }}>리뷰</Link></h2>
+                  <h2><Link to={{
+                    pathname:
+                  `/game/${item.etitle}/Review`,
+                  state:{
+                    id:`${item.id}`,
+                    title: `${item.title}`,
+                    etitle: `${item.etitle}`,
+                    genres: gen,
+                    userscore: `${item.userscore}`,
+                    poster: `${item.poster}`,
+                    summary: `${item.summary}`,
+                    supportLang: `${item.supportLang}`,
+                    grade: `${item.grade}`,
+                    platform: `${item.platform}`,
+                    rdate: `${item.rdate}`,
+                    distributor : `${item.distributor }`,
+                    minOS: `${item.minOS}`,
+                    minCPU: `${item.minCPU}`,
+                    minGraphic: `${item.minGraphic}`,
+                    minMemory: `${item.minMemory}`,
+                    minStorage: `${item.minStorage}`,
+                    recOS: `${item.recOS}`,
+                    recCPU: `${item.recCPU}`,
+                    recGraphic: `${item.recGraphic}`,
+                    recMemory: `${item.recMemory}`,
+                    recStorage: `${item.recStorage}`,
+                  }}}
+                >리뷰</Link></h2>
                 </li>
                 <ul className="detail_game_rating_right_count">
                   <li>
                     <h2>평점</h2>
                   </li>
                   <li>
-                    <h3>{location.state.userscore}</h3>
+                    <h3>{item.userscore}</h3>
                   </li>
                 </ul>
               </ul>
             </div>
-            <h3 className="detail_game__summary">{location.state.summary}</h3>
+            <h3 className="detail_game__summary">{item.summary}</h3>
             <div className="detail_game_about">
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">장르</li>
                 <ul className="detail_game__genres_name2 detail_game__genres2">
-                  {location.state.genres.map((genres, index) => (
+                  {item.genres.map((genres, index) => (
                     <li key={index}>{genres}</li>
                   ))}
                 </ul>
@@ -61,37 +97,37 @@ class Detail extends React.Component {
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">언어</li>
                 <li className="detail_game__genres_name2">
-                  {location.state.supportLang}
+                  {item.supportLang}
                 </li>
               </ul>
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">등급</li>
                 <li className="detail_game__genres_name2">
-                  {location.state.grade}
+                  {item.grade}
                 </li>
               </ul>
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">플랫폼</li>
                 <li className="detail_game__genres_name2">
-                  {location.state.platform}
+                  {item.platform}
                 </li>
               </ul>
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">출시</li>
                 <li className="detail_game__genres_name2">
-                  {location.state.rdate}
+                  {item.rdate}
                 </li>
               </ul>
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">제작</li>
                 <li className="detail_game__genres_name2">
-                  {location.state.product}
+                  {item.product}
                 </li>
               </ul>
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">배급</li>
                 <li className="detail_game__genres_name2">
-                  {location.state.distributor}
+                  {item.distributor}
                 </li>
               </ul>
             </div>
@@ -101,31 +137,31 @@ class Detail extends React.Component {
                 <ul className="detail_game__genres">
                   <li className="detail_game__genres_name">OS</li>
                   <li className="detail_game__genres_name2">
-                    {location.state.minOS}
+                    {item.minOS}
                   </li>
                 </ul>
                 <ul className="detail_game__genres">
                   <li className="detail_game__genres_name">CPU</li>
                   <li className="detail_game__genres_name2">
-                    {location.state.minCPU}
+                    {item.minCPU}
                   </li>
                 </ul>
                 <ul className="detail_game__genres">
                   <li className="detail_game__genres_name">그래픽</li>
                   <li className="detail_game__genres_name2">
-                    {location.state.minGraphic}
+                    {item.minGraphic}
                   </li>
                 </ul>
                 <ul className="detail_game__genres">
                   <li className="detail_game__genres_name">메모리</li>
                   <li className="detail_game__genres_name2">
-                    {location.state.minMemory}
+                    {item.minMemory}
                   </li>
                 </ul>
                 <ul className="detail_game__genres">
                   <li className="detail_game__genres_name">저장공간</li>
                   <li className="detail_game__genres_name2">
-                    {location.state.minStorage}
+                    {item.minStorage}
                   </li>
                 </ul>
               </div>
@@ -134,31 +170,31 @@ class Detail extends React.Component {
                 <ul className="detail_game__genres">
                   <li className="detail_game__genres_name">OS</li>
                   <li className="detail_game__genres_name2">
-                    {location.state.recOS}
+                    {item.recOS}
                   </li>
                 </ul>
                 <ul className="detail_game__genres">
                   <li className="detail_game__genres_name">CPU</li>
                   <li className="detail_game__genres_name2">
-                    {location.state.recCPU}
+                    {item.recCPU}
                   </li>
                 </ul>
                 <ul className="detail_game__genres">
                   <li className="detail_game__genres_name">그래픽</li>
                   <li className="detail_game__genres_name2">
-                    {location.state.recGraphic}
+                    {item.recGraphic}
                   </li>
                 </ul>
                 <ul className="detail_game__genres">
                   <li className="detail_game__genres_name">메모리</li>
                   <li className="detail_game__genres_name2">
-                    {location.state.recMemory}
+                    {item.recMemory}
                   </li>
                 </ul>
                 <ul className="detail_game__genres">
                   <li className="detail_game__genres_name">저장공간</li>
                   <li className="detail_game__genres_name2">
-                    {location.state.recStorage}
+                    {item.recStorage}
                   </li>
                 </ul>
               </div>

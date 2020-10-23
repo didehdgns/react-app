@@ -1,0 +1,79 @@
+.review {
+  width: 80%;
+  background-color: white;
+  margin-bottom: 70px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-weight: 300;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  border-radius: 5px;
+  color: #9a9ba7;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.review img {
+  position: relative;
+  top: -50px;
+  max-width: 200px;
+  width: 100%;
+  margin-right: 30px;
+  box-shadow: 0px 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+}
+
+.review_game_data {
+  width: 100%;
+}
+.review .review_game_title {
+  margin-right: auto;
+  margin-bottom: 5px;
+  font-size: 24px;
+  margin: 0;
+  font-weight: 300;
+  color: #2c2c2c;
+}
+
+.review .review_game__genres {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin: 5px 0;
+}
+
+.review_game_rating {
+  display: flex;
+  margin: 0;
+}
+.review_game_rating h2 {
+  margin: 0;
+}
+.review_game_rating_left {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.review_game_rating_right {
+  margin-left: auto;
+  display: flex;
+  list-style: none;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.review_game_rating_right > li {
+  list-style: none;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.review_game_rating_right_count {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
