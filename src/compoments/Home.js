@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import Game from "./Game";
 import "./App.css";
+import firebase from "./fire"
 
 class Home extends React.Component {
   state = {

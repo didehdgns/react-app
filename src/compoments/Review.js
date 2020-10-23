@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import './Review.css'
+import './Review.css';
+import Form from './From';
 
 class Review extends React.Component{
     constructor(props){
@@ -12,6 +13,8 @@ class Review extends React.Component{
       componentDidMount() {
         console.log(this.props);
         const { location, history } = this.props;
+        const item = this.state.item;
+        const gen = [item.genres];
         if (location.state === undefined) {
           history.push("/"); // home으로 가기
         }
@@ -90,10 +93,10 @@ class Review extends React.Component{
                         <div>
                             <ul>
                                 <li>
-                                    <img></img>
+                                    <span>아이콘 이미지</span>
                                 </li>
                                 <li>
-                                    로그인 후 작성 가능합니다.
+                                    <Form/>
                                 </li>
                             </ul>
                             
