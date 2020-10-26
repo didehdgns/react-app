@@ -13,7 +13,7 @@ function App() {
     <HashRouter>
       <Navigation />
       <Route path="/" exact={true} component={Home} />
-      <Route path="/game/:etitle/About" component={Detail} />
+      <Route path="/game/:etitle/About" component={Detail}/>
       <Route path="/game/:etitle/Review" component={Review}/>
       <Route path="/Search" component={Search} />
       <Route path="/Login" component={Login} />

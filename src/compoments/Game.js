@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import "./Game.css";
 
 function Game({
+  id,
   year,
   title,
   etitle,
@@ -33,6 +34,7 @@ function Game({
       to={{
         pathname: `/game/${etitle}/About`,
         state: {
+          id,
           year,
           title,
           etitle,

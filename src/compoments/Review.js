@@ -1,7 +1,8 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
 import './Review.css';
-import Form from './From';
+import firebase from './fire';
+import CommentList from './CommentList';
 
 class Review extends React.Component{
     constructor(props){
@@ -14,19 +15,18 @@ class Review extends React.Component{
         console.log(this.props);
         const { location, history } = this.props;
         const item = this.state.item;
-        const gen = [item.genres];
+        
         if (location.state === undefined) {
           history.push("/"); // home으로 가기
+
         }
-        
-        
       }
+      
+
       render() {
         
         const item = this.state.item;
-        const gen = [item.genres];
         const { location } = this.props;
-        
         console.log(item)
         console.log(location.state)
         console.log(this.props.history)
@@ -50,9 +50,10 @@ class Review extends React.Component{
                       `/game/${item.etitle}/About`,
                       state:{
                         id:`${item.id}`,
+                        key:`${item.id}`,
                         title: `${item.title}`,
                         etitle: `${item.etitle}`,
-                        genres: gen,
+                        genres: `${item.genres}`,
                         userscore: `${item.userscore}`,
                         poster: `${item.poster}`,
                         summary: `${item.summary}`,
@@ -96,12 +97,15 @@ class Review extends React.Component{
                                     <span>아이콘 이미지</span>
                                 </li>
                                 <li>
-                                    <Form/>
+                                    <From key={item.id}/>
                                 </li>
                             </ul>
                             
                         </div>
                     </div>
+                </div>
+                <div>
+                  <CommentList/>
                 </div>
               </div>
             </div>
@@ -112,4 +116,26 @@ class Review extends React.Component{
       }
 }
 
+function From(key){
+  const [comment,setComment]= useState('');
+ 
+  
+  const handleOnChane = (e) => {
+      setComment(e.target.value)
+  }
+  const addComment = () => {
+      const commentRef = firebase.database().ref('data/comment/');
+      const comments = {
+          comment,
+      }
+
+      commentRef.push(comments)
+  }
+  return(
+      <div>
+          <input type="text" onChange={handleOnChane} value={comment} placeholder="평가를 입력하세요" />
+          <button onClick={addComment}>평가 게시</button>
+      </div>
+  )
+}
 export default Review;

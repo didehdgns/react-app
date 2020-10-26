@@ -7,11 +7,13 @@ class Detail extends React.Component {
     super(props);
     this.state = {
       item : this.props.location.state,
+      
     }
   }
   componentDidMount() {
     console.log(this.props);
     const { location, history } = this.props;
+    
     if (location.state === undefined) {
       history.push("/"); // home으로 가기
     }
@@ -20,7 +22,7 @@ class Detail extends React.Component {
   render() {
     const item = this.state.item;
 
-    const gen = [item.genres];
+   
     const { location } = this.props;
    
     console.log(location.state)
@@ -50,9 +52,10 @@ class Detail extends React.Component {
                   `/game/${item.etitle}/Review`,
                   state:{
                     id:`${item.id}`,
+                    key:`${item.id}`,
                     title: `${item.title}`,
                     etitle: `${item.etitle}`,
-                    genres: gen,
+                    genres: `${item.genres}`,
                     userscore: `${item.userscore}`,
                     poster: `${item.poster}`,
                     summary: `${item.summary}`,
@@ -88,11 +91,9 @@ class Detail extends React.Component {
             <div className="detail_game_about">
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">장르</li>
-                <ul className="detail_game__genres_name2 detail_game__genres2">
-                  {item.genres.map((genres, index) => (
-                    <li key={index}>{genres}</li>
-                  ))}
-                </ul>
+                <li className="detail_game__genres_name2">
+                  {item.genres}
+                </li>
               </ul>
               <ul className="detail_game__genres">
                 <li className="detail_game__genres_name">언어</li>

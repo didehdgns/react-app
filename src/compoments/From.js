@@ -1,14 +1,15 @@
 import React, {useState} from 'react';
 import firebase from './fire'
 
-export default function Form(){
+export default function From(key){
     const [comment,setComment]= useState('');
-
+   
+    
     const handleOnChane = (e) => {
         setComment(e.target.value)
     }
     const addComment = () => {
-        const commentRef = firebase.database().ref("data/games/");
+        const commentRef = firebase.database().ref('data/games/'+key+'/comment');
         const comments = {
             comment,
         }
